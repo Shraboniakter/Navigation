@@ -41,7 +41,7 @@ class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Page1'),),
+      appBar: AppBar(title: Text("page1"),),
       body: Center(child: Text('Software Developer',style: TextStyle(fontWeight: FontWeight.bold),),),
     );
   }
@@ -51,14 +51,14 @@ class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('page2'),),
+      appBar: AppBar(title: Text("Page2"),),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(child:
             Text('Hello Shrabon',style: TextStyle(fontWeight: FontWeight.bold),),),
           ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Page3()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Page3('shrabon')));
           }, child: Text('Page3'))
         ],
       ),
@@ -66,11 +66,13 @@ class Page2 extends StatelessWidget {
   }
 }
 class Page3 extends StatelessWidget {
+  String msg;
+   Page3(this.msg, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('page3'),),
+      appBar: AppBar(title: Text(msg),),
       body: Center(child:
       Text('Iam Try',style: TextStyle(fontWeight: FontWeight.bold),),),
     );
