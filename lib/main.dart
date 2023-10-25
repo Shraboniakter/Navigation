@@ -21,9 +21,9 @@ class Myapp extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Home'),),
   body: Center(
-    child: CircularProgressIndicator(
+    child: LinearProgressIndicator(
+      minHeight: 10,
       color: Colors.black,
-      strokeWidth: 10,
       backgroundColor: Colors.grey,
     ),
 
