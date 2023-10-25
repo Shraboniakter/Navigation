@@ -20,21 +20,14 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Home'),),
-      body: Center(
-        child:Card(
-          elevation: 30,
-   // margin: EdgeInsets.zero,
-    //clipBehavior: Clip.antiAlias,
-    shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(16)),
-            child: SizedBox(
-          height: 100,
-          width: 300,
-          child:Center( child:Text('This is card')),
-        )
+  body: Center(
+    child: CircularProgressIndicator(
+      color: Colors.black,
+      strokeWidth: 10,
+      backgroundColor: Colors.grey,
+    ),
 
-          ),
-      ),
+    ),
 
     );
   }
